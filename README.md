@@ -2,7 +2,9 @@
 
 The profile setting WS help you to manage the VOD profile settings. view the settings keys, view one profile setting and sort profiles by age and gender.
 
-Get Setting Options
+WS based on Heroku : https://profile-settings.herokuapp.com/
+
+Get Setting Options - get request
 
 This function returns all the keys of the profile setting.
 
@@ -12,8 +14,9 @@ exemple: { keys: [ "id", "name", "password", "city", "age", "gender" ] }
 
 this function not require any parameters, just use the below URL:
 
-[https://profile-settings.herokuapp.com/getAllSettingOptions]
-Get User setting by Id
+https://profile-settings.herokuapp.com/getAllSettingOptions
+
+Get User setting by Id - post request
 
 This function returns sepcific profile setting by sending an profile_id parameter.
 
@@ -23,9 +26,9 @@ the profile_id parameter is integer number and you must sent a known profile_id 
 
 if there is no match profile to the profile_id you will receive error massge : {"error":"profile not found"}
 
-[https://profile-settings.herokuapp.com/getUserProfileSetting/profile_id]
+https://profile-settings.herokuapp.com/getUserProfileSetting/profile_id
 
-Get User profile by age and gender
+Get User profile by age and gender - post request
 
 This function returns all profile that Below a certain age and belong to the same gender
 
@@ -39,6 +42,6 @@ if one of the parameters wrong you will receive an error massge:
 if there is no match profile to age and gender parameters you will receive error massge :
 {"error":"there is no profile match to age and gender parameters"}
 
-[https://profile-settings.herokuapp.com/getUserProfileByParams/age/gender]
+https://profile-settings.herokuapp.com/getUserProfileByParams/age/gender
 
 © Shenkar College, Yossi Efraim
