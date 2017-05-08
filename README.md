@@ -12,7 +12,7 @@ exemple: { keys: [ "id", "name", "password", "city", "age", "gender" ] }
 
 this function not require any parameters, just use the below URL:
 
-/getAllSettingOptions
+[https://profile-settings.herokuapp.com/getAllSettingOptions]
 Get User setting by Id
 
 This function returns sepcific profile setting by sending an profile_id parameter.
@@ -23,7 +23,8 @@ the profile_id parameter is integer number and you must sent a known profile_id 
 
 if there is no match profile to the profile_id you will receive error massge : {"error":"profile not found"}
 
-/getUserProfileSetting/profile_id
+[https://profile-settings.herokuapp.com/getUserProfileSetting/profile_id]
+
 Get User profile by age and gender
 
 This function returns all profile that Below a certain age and belong to the same gender
@@ -32,10 +33,12 @@ This function require 2 parameters, the first to send is age - an integer number
 
 The second parameter is gender - male or female.
 
-if one of the parameters wrong you will receive an error massge:{"error":"gender parameter invalid"} or {"error":"age parameter invalid"}
+if one of the parameters wrong you will receive an error massge:
+{"error":"gender parameter invalid"} or {"error":"age parameter invalid"}
 
-if there is no match profile to age and gender parameters you will receive error massge : {"error":"there is no profile match to age and gender parameters"}
+if there is no match profile to age and gender parameters you will receive error massge :
+{"error":"there is no profile match to age and gender parameters"}
 
-/getUserProfileByParams/age/gender
+[https://profile-settings.herokuapp.com/getUserProfileByParams/age/gender]
 
 © Shenkar College, Yossi Efraim
