@@ -5,14 +5,22 @@
         "password":1,
         "city":"Rishon Lzion",
         "age":26,
-        "gender":"male"
+        "gender":"male",
+        "payment":{
+            "type":"credit card",
+            "owner":"Yossi efraim"
+        }
     },{
         "id":2,
         "name":"Adi",
         "password":1,
         "city":"Tel Aviv",
         "age":30,
-        "gender":"female"
+        "gender":"female",
+        "payment":{
+            "type":"credit card",
+            "owner":"Adi efraim"
+        }
 
     },{
         "id":3,
@@ -20,6 +28,10 @@
         "password":1,
         "city":"Kfar Saba",
         "age":32,
-        "gender":"male"
+        "gender":"male",
+        "payment":{
+            "type":"direct debit",
+            "owner":"Moshe choen"
+        }
     }]
 }

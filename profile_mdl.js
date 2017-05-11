@@ -16,28 +16,29 @@ exports.getUserProfileSetting = function(profile_id){
       }
     }
     if(!foundId){
-      if(typeof(profile_id)=="number"){
+      console.log(profile_id);
+      if(isNaN(profile_id)){
         return config.profileId1;//`error:profile_id parameter invalid`;
       }
       else return config.profileId2;//`error:profile not found`;
     }     
 }
 
-exports.getUserProfileByParams = function(age,gender){
+exports.getUserProfileByParams = function(age,payment){
     let profiles=[];
     let found = false;
     for(var i in data.profiles){
       let profile = data.profiles[i];
-      if(profile.age <age && profile.gender==gender){
+      if(profile.age <age && profile.payment.type==payment){
         found=true;
         profiles[i]=profile;
       }
     }
     if(!found){
-      if(gender!="male"&&gender!="female"){
-        return config.gender;//`error:gender parameter invalid`;
+      if(payment!="credit card"&&payment!="direct debit"){
+        return config.payment;//`error:gender parameter invalid`;
       }
-      else if(typeof(age)!="number"){
+      else if(isNaN(age)){
         return config.age;//`error:age parameter invalid`;
       }else
       return config.paramsMatch;//`error:there is no profile match to age and gender parameters`;

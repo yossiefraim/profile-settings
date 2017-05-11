@@ -15,12 +15,12 @@ app.get('/getAllSettingOptions/',
 
 app.post('/getUserProfileSetting',
   (req,res) => {
-    res.status(200).json(operator.getUserProfileSetting(req.body.profile_id));
+    res.status(200).json(operator.getUserProfileSetting(parseInt(req.body.profile_id)));
   });
 
 app.post('/getUserProfileByParams',
   (req,res) => {
-      res.status(200).json(operator.getUserProfileByParams(req.body.age,req.body.gender));
+      res.status(200).json(operator.getUserProfileByParams(parseInt(req.body.age),req.body.payment));
   });
 
 app.all('*',
