@@ -1,7 +1,7 @@
 # VOD profile setting WS API
 The profile setting WS help you to manage the VOD profile settings.
 view the settings keys, view one profile setting and sort profiles by age and gender.
-WS based on Heroku https://profile-settings.herokuapp.com
+WS based on Heroku https://profile-setting-v2.herokuapp.com
 <hr>
 <h3>Get Setting Options - Get method</h3>
 This function returns all the keys of the profile setting.
@@ -22,7 +22,8 @@ exemple:
   ]
 }   
 
-this function not require any parameters, just use the below URL:https://profilesettings.herokuapp.com<mark>/getAllSettingOptions</mark>
+this function not require any parameters, just use the below URL:
+https://profile-setting-v2.herokuapp.com<mark>/getAllSettingOptions</mark>
 <hr>
 
 <h3>Get User setting by Id - Post method </h3>
@@ -31,7 +32,7 @@ after using this function you will receive a json file with all the user profile
 the profile_id parameter is integer number and you must sent a known profile_id number esle you will receive 
 an error massge:"{"error":"profile_id parameter invalid"}"
 if there is no match profile to the profile_id you will receive error massge : {"error":"profile not found"}.
-https://profile-settings.herokuapp.com/getUserProfileSetting<mark>/profile_id</mark>
+https://profile-setting-v2.herokuapp.com/getUserProfileSetting<mark>/profile_id</mark>
 <hr>
 
 <h3>Get User profile by age and payment method - Post method</h3>
@@ -42,6 +43,6 @@ if one of the parameters wrong you will receive an error massge:{"error":"paymen
 {"error":"age parameter invalid"}.
 if there is no match profile to age and payment parameters you will receive error massge : 
 {"error":"there is no profile match to age and payment parameters"}
-https://profile-settings.herokuapp.com/getUserProfileByParams<mark>/age/payment</mark></a>                
+https://profile-setting-v2.herokuapp.com/getUserProfileByParams<mark>/age/payment</mark></a>                
 <hr>
 <small>&copy; Shenkar College, Yossi Efraim</small>
